@@ -1,0 +1,10 @@
+footer {
+  background-color: var(--color-primary);
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  height: 200px;
+  clip-path: polygon(41% 13%, 100% 0, 100% 100%, 0 100%, 0 0);
+}

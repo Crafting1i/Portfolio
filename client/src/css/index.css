@@ -1,0 +1,116 @@
+:root {
+  --max-width: 1200px;
+  --header-height: 64px;
+  --color-text: #777;
+  --color-primary: #5f83db;
+  --color-secondary: #137bdb;
+  --color-tertiary: #bcd2d5;
+  --color-quaternary: #fafafa;
+}
+
+html {
+  height: 10000px;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+.modal .modal__container {
+  pointer-events: auto;
+  border-radius: 5px;
+  padding: 16px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+  background: white;
+}
+.modal .modal__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal__btn {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  overflow: hidden;
+  pointer-events: auto;
+}
+.overlay__scrim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+@media screen and (max-width: 900px) {
+  .modal__btn {
+    content: "";
+    display: block;
+    width: 32px;
+    padding: 4px;
+    height: 32px;
+    margin: 16px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .modal__btn img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  :root {
+    --max-width: 1500px;
+  }
+}
