@@ -1,6 +1,5 @@
 ./client/.snowpack
 ./client/build
+./server/build
 
 node_modules
-./client/node_modules
-./client/node_modules
